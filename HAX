@@ -1,0 +1,87 @@
+pasting into terminal:
+    ctrl+shift+v
+    
+opening webcam:
+    console => cheese
+
+lsmod
+    
+number of processes
+    ls /proc/[0-9] | wc -l
+
+find pid of process:
+    pidof <process name>
+    
+Path Files:
+https://stackoverflow.com/a/65398790
+
+print path:
+echo "${PATH//:/$'\n'}"
+(https://www.cyberciti.biz/tips/bash-shell-parameter-substitution-2.html)
+
+add to path:
+export PATH=$PATH:/your/new/path/here
+
+run brew:
+eval $(~/.linuxbrew/bin/brew shellenv)
+
+list PATH:
+echo $PATH | sed 's/:/\n/g' | sort | uniq -c
+
+update path:
+source $PATH
+
+git credentials:
+git config --global credential.credentialStore secretservice 
+(actually works, it's incredible)
+
+adding to bash profile: (THE REAL ANSWER TO UPDATING PATH FILES)
+/home/bokayy/.bash_profile
+
+See all programs running on a certain port:
+netstat -ltnp | grep -w ':80'
+
+git default keyring:
+lochrian
+
+screenshot:
+FN + s
+
+npm permissions errors fix:
+chown -R myUserName /home/myusername/myfolder
+(?sudo?) npm install -g --unsafe-perm=true --allow-root
+
+making NVM work:
+(BASH ONLY):
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+
+Changing node versions:
+1. open bash
+2. eval "#(fnm env)"
+3. fnm install <version>
+4. fnm use
+5. now a new node version is being used globally, happy hacking!
+
+Configuring PATH with nushell:
+https://dev.to/vaibhavdn/using-fnm-with-nushell-3kh1
+-check the nushell cookbook, then search eval and you'll find an entry talking about ssh, and not being able to use eval.
+This guide contains info on proper usage.
+
+Making screensharing work in Slack:
+alt f2
+type lg
+global.context.unsafe_mode=true
+
+alternatively
+chrome://flags/#enable-webrtc-pipewire-capturer
+
+alternatively
+this fix: slack --enable-features=WebRTCPipeWireCapturer
+persistent:
+gedit admin:///usr/share/applications/slack.desktop
+find Exec=/usr/bin/slack %U
+Exec=/usr/bin/slack --enable-features=WebRTCPipeWireCapturer %U
+
+https://askubuntu.com/questions/1407494/screen-share-not-working-in-ubuntu-22-04-in-all-platforms-zoom-teams-google-m
+https://www.reddit.com/r/gnome/comments/pudppv/how_to_turn_on_unsafemode_context/hz30oml/
