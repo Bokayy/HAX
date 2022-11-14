@@ -85,3 +85,8 @@ Exec=/usr/bin/slack --enable-features=WebRTCPipeWireCapturer %U
 
 https://askubuntu.com/questions/1407494/screen-share-not-working-in-ubuntu-22-04-in-all-platforms-zoom-teams-google-m
 https://www.reddit.com/r/gnome/comments/pudppv/how_to_turn_on_unsafemode_context/hz30oml/
+
+nushell env acces
+example: see active renderer
+$env.XDG_SESSION_TYPE 
+instead of $PATH with bash
