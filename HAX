@@ -92,4 +92,4 @@ $env.XDG_SESSION_TYPE
 instead of $PATH with bash
 
 -Full directory access for non root
-chmod 777 9
+chmod 777 *dirname*
