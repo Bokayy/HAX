@@ -90,3 +90,6 @@ nushell env acces
 example: see active renderer
 $env.XDG_SESSION_TYPE 
 instead of $PATH with bash
+
+-Full directory access for non root
+chmod 777 9
